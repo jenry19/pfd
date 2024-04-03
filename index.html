@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="adobe-dc-view"></div>
+<script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){
+		var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
+		adobeDCView.previewFile({
+			content:{location: {url: "/books/Tikaenelcanaldeldique_PROP.pdf"}},
+			metaData:{fileName: "Tikaenelcanaldeldique_PROP.pdf"}
+		}, {});
+	});
+</script>
+</body>
+</html>
